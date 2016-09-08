@@ -5,10 +5,10 @@
 #Inicia el server
 node ../app.js > server_log.txt &
 SERVER_PID=$!
-SERVER_OUT=$(tail -n 1 log.txt);
+SERVER_OUT=$(tail -n 1 server_log.txt);
 while [ "$SERVER_OUT" != "Express server listening on port 3000 in development mode" ]; 
 do
-SERVER_OUT=$(tail -n 1 log.txt);
+SERVER_OUT=$(tail -n 1 server_log.txt);
 done
 echo $SERVER_OUT;
 
