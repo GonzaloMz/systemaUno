@@ -1,8 +1,14 @@
+var express = require('express');
+var router = express.Router();
+var product = require('./product.js');
 
-/*
- * GET home page.
- */
+console.log(product);
+router.get('/',function(req, res, next){
+  res.render('index', { title: 'Express' });
+});
 
-exports.index = function(req, res){
-  res.render('index', { title: 'Express' })
-};
+router.get('/createProduct', product.createProduct);
+
+router.post('/createProduct', product.saveProduct);
+
+module.exports = router;

@@ -1,0 +1,20 @@
+include layout
+
+form(action='createProduct' method='post')
+	label(for='code') Codigo:
+	input(type='text', label='talle', id='code', name='code')
+	br
+	label(for='description') Descripcion:
+	input(type='text', id='description', name='description')
+	br
+	label(for='size') Talle:
+	- each size in sizes
+		input(type='checkbox' id='#{size}' name='size[]')
+		label(for='#{size}') #{size}
+	br
+	label(for='type') Tipo:
+	- each type in types
+		input(type='checkbox' id='#{type}' name='#{type}')
+		label(for='#{type}') #{type}
+	br
+	input(type='submit' value='Enviar')
