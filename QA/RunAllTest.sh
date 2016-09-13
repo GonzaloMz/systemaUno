@@ -19,7 +19,7 @@ echo $SERVER_OUT;
 PATH_BACKUP=$PATH;
 PATH=/usr/lib/jvm/jdk-8-oracle/:/usr/lib/jvm/jdk-8-oracle/bin/:$PATH
 
-mvn test -Dwebdriver.firefox.marionette=false -Dtest.url="http://127.0.0.1:3000" -f pomFunctionalTest.xml
+mvn test -Dwebdriver.firefox.marionette=false -Dtest.url="http://127.0.0.1:3000/" -f pomFunctionalTest.xml
 
 PATH=$PATH_BACKUP;
 

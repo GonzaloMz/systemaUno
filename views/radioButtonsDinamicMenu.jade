@@ -1,0 +1,5 @@
+div(id='#{optionsName}')
+- each option in options
+		input(type='radio' id='#{option}' value='#{option}' name='#{optionsName}')
+		label(for='#{option}') #{option}
+	br

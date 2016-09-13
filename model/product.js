@@ -6,6 +6,7 @@ var productSchema = new Schema(
 		code: {type:String, required:true, unique:true}
 		, description: {type:String, required:true}
 		, type: {type:String, required:true}
+		, factory: {type:String, required:true}
 		, available: [
 			{
 				size: {type:String, required:true}
@@ -15,4 +16,4 @@ var productSchema = new Schema(
 	}
 );
 
-mongoose.model('Product', productSchema);
+module.exports=mongoose.model('Product', productSchema);

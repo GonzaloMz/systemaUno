@@ -11,12 +11,14 @@ import cucumber.api.junit.Cucumber;
 import functional.steps.TestDeMetodologiaSteps;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/functional/features", plugin={"json:reporte.json"}, glue="", tags={})
+@CucumberOptions(features="src/test/functional/features", plugin={"json:reporte.json"}, glue="", tags={"@Run"})
 public class TestDeMetodologia {
 
 	
 	@BeforeClass
 	public static void before(){
+		System.setProperty("webdriver.firefox.marionette", "false");
+		System.setProperty("test.url","http://127.0.0.1:3000/");
 		TestDeMetodologiaSteps.driver=new FirefoxDriver();
 	}
 	

@@ -7,15 +7,16 @@ a {
   color: #00B7FF;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"],input[type="radio"] {
     display:none;
 }
-input[type="checkbox"] + label {
+
+input[type="checkbox"] + label, input[type="radio"] + label  {
     display:inline-block;
     padding: 10px;
 }
 
-input[type="checkbox"]:checked + label {
+input[type="checkbox"]:checked + label, input[type="radio"]:checked + label {
     display:inline-block;
     background-color: green;
 }

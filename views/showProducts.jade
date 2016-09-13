@@ -1,0 +1,15 @@
+include layout
+
+table#products
+	tr
+		th Codigo
+		th Tipo
+		th Descripcion
+		th Fabrica
+	tbody
+		-each product in products
+			tr
+				td= product.code
+				td= product.type
+				td= product.description
+				td= product.factory
