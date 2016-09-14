@@ -1,4 +1,7 @@
-- each option in options
-		input(type='checkbox' id='#{option}' value='#{option}' name='#{optionsName}')
-		label(for='#{option}') #{option}
-	br
+if options
+	- each option in options
+			input(type='checkbox' id='#{option}' value='#{option}' name='#{optionsName}')
+			label(for='#{option}') #{option}
+		if addPlusButton
+			input(type='button', value='+')
+		br

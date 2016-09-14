@@ -1,5 +1,9 @@
 div(id='#{optionsName}')
-- each option in options
-		input(type='radio' id='#{option}' value='#{option}' name='#{optionsName}')
-		label(for='#{option}') #{option}
-	br
+	- each option in options
+			input(type='radio' id='#{option}' value='#{option}' name='#{optionsName}')
+			label(for='#{option}') #{option}
+		if addPlusButton
+			input(type='text', id='new_#{optionsName}')
+			input(type='button', value='+', onclick='newOptionForMenu("#{optionsName}", "radio")')
+			- addPlusButton = false
+		br

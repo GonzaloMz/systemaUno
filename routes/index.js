@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var product = require('./product.js');
+var menu = require('./menu.js');
 
 console.log(product);
 router.get('/',function(req, res, next){
@@ -11,6 +12,8 @@ router.get('/createProduct', product.createProduct);
 
 router.post('/createProduct', product.saveProduct);
 
-router.get('/getProducts', product.getProducts)
+router.get('/getProducts', product.getProducts);
+
+router.post('/newOptionForMenu/:menu/:option', menu.addOption);
 
 module.exports = router;

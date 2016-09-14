@@ -8,8 +8,10 @@ form(action='createProduct' method='post')
 	input(type='text', id='description', name='description')
 	br
 	//generacion con radioButtonsDinamicMenu
-	- options=factory; optionsName="factory"
+	h3 Fabrica
+	- options=factory; optionsName="factory"; addPlusButton=true;
 	include radioButtonsDinamicMenu
-	- options=types; optionsName="type"
+	h3 Tipo de prenda
+	- options=types; optionsName="type"; addPlusButton=true;
 	include radioButtonsDinamicMenu
 	input(type='submit' value='Enviar')

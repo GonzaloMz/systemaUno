@@ -3,7 +3,7 @@
 #Hay que poder customizar el puerto
 
 #Inicia el server
-node ../app.js > server_log.txt &
+nodejs ../app.js > server_log.txt &
 SERVER_PID=$!
 SERVER_OUT=$(tail -n 1 server_log.txt);
 while [ "$SERVER_OUT" != "Express server listening on port 3000 in development mode" ]; 
